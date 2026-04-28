@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Published Work | O2M Design";
+const description = "Books and published work by Jorge R. Obando.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="hero">
+    <h1>Published Work</h1>
+  </section>
+
+  <section class="section">
+    <div class="book-grid">
+  <a href="https://whatremains.info" target="_blank" class="book">
+    <img src="/books/what-remains.jpg" alt="What Remains cover" />
+    <h3>What Remains</h3>
+    <p>
+      A reflective exploration of memory, presence, and the quiet moments
+      that shape how we see the world.
+    </p>
+  </a>
+
+  <a href="https://thetracksremember.com" target="_blank" class="book">
+    <img src="/books/the-tracks-remember.jpg" alt="The Tracks Remember cover" />
+    <h3>The Tracks Remember</h3>
+    <p>
+      A story of travel, family, and the moments that stay with us long after
+      they’ve passed.
+    </p>
+  </a>
+
+  <a href="https://trainsandcastles.com" target="_blank" class="book">
+    <img src="/books/trains-and-castles.jpg" alt="Trains and Castles cover" />
+    <h3>Trains and Castles</h3>
+    <p>
+      A companion story for younger readers, built from the same journey
+      and sense of discovery.
+    </p>
+  </a>
+</div>
+  </section>
+</BaseLayout>

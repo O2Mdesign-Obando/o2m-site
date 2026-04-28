@@ -1,17 +1,125 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const title = "O2M Design | Product Design & UX/UI in New Jersey";
+const description = "O2M Design is a New Jersey-based product design and UX/UI practice focused on building clear, scalable digital experiences.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title} description={description}>
+  <section class="hero">
+    <div class="eyebrow">Product Design · Systems Thinking · Digital Experiences</div>
+
+    <h1>
+      Structured digital experiences,
+      designed for clarity and real-world use.
+    </h1>
+
+    <p>
+      Based in New Jersey, I work with local businesses and growing teams to design products,
+      systems, and interfaces that are simple, scalable, and effective.
+    </p>
+
+    <p>
+      <a href="mailto:connect@o2mdesign.com">Let’s talk →</a>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>What I Do</h2>
+    <p>
+      I help businesses understand their users, structure their digital systems,
+      and design experiences that work in the real world — from early discovery
+      to final execution.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>A Local, Hands-On Partner</h2>
+    <p>
+      I work directly with clients as a hands-on design partner — not as a distant agency.
+      This means clear communication, practical solutions, and close collaboration.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Services</h2>
+
+    <div class="grid">
+      <div class="card">
+        <strong>Product Design</strong>
+        <p>End-to-end product design focused on usability and scalability.</p>
+      </div>
+
+      <div class="card">
+        <strong>UX/UI Design</strong>
+        <p>Clear, intuitive interfaces grounded in real user behavior.</p>
+      </div>
+
+      <div class="card">
+        <strong>Systems Thinking</strong>
+        <p>Designing connected systems — not isolated screens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Selected Clients</h2>
+    <p>
+      Selected collaborations across enterprise, finance, healthcare, and technology.
+    </p>
+
+    <div class="logo-grid">
+      <img src="/logos/amazon.png" alt="Amazon" />
+      <img src="/logos/ibm.png" alt="IBM" />
+      <img src="/logos/american-express.png" alt="American Express" />
+      <img src="/logos/audible.png" alt="Audible" />
+
+      <img src="/logos/novartis.png" alt="Novartis" />
+      <img src="/logos/wells-fargo.png" alt="Wells Fargo" />
+      <img src="/logos/t-rowe-price.png" alt="T. Rowe Price" />
+      <img src="/logos/ab-inbev.png" alt="AB InBev" />
+
+      <img src="/logos/saama.png" alt="Saama" />
+      <img src="/logos/boehringer-ingelheim.png" alt="Boehringer Ingelheim" />
+      <img src="/logos/medidata.jpg" alt="Medidata" />
+      <img src="/logos/wolters-kluwer.png" alt="Wolters Kluwer" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Published Work</h2>
+
+    <div class="grid">
+      <div class="card">
+        <strong>What Remains</strong>
+        <p>A reflective exploration of memory and presence.</p>
+      </div>
+
+      <div class="card">
+        <strong>The Tracks Remember</strong>
+        <p>A story of travel, family, and lasting moments.</p>
+      </div>
+
+      <div class="card">
+        <strong>Trains and Castles</strong>
+        <p>A companion story for younger readers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-block">
+    <div class="contact-inner">
+      <h2>Contact</h2>
+      <p>
+        If you’re working on something and need clarity, structure, or a second perspective — let’s talk.
+      </p>
+
+      <p>
+        <a href="mailto:connect@o2mdesign.com">connect@o2mdesign.com</a><br />
+        <a href="https://www.linkedin.com/company/o2m-design" target="_blank">
+          LinkedIn
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
