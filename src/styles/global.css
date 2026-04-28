@@ -179,8 +179,8 @@ footer {
 }
 
 .logo-grid img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
+  opacity: 0.7;
+  filter: grayscale(100%);
 }
 
 @media (max-width: 760px) {
@@ -282,4 +282,17 @@ footer {
   .hero {
     padding-top: 72px;
   }
+}
+
+.card-link {
+  display: block;
+  color: inherit;
+  border-bottom: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  color: inherit;
 }
