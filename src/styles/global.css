@@ -284,6 +284,10 @@ footer {
   }
 }
 
+.hero a {
+  font-weight: 600;
+}
+
 .card-link {
   display: block;
   color: inherit;
