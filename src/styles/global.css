@@ -247,3 +247,39 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 760px) {
+  .site-header {
+    padding: 28px 20px 22px;
+  }
+
+  .nav {
+    gap: 22px;
+  }
+
+  .brand-logo {
+    gap: 18px;
+  }
+
+  .brand-logo img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .brand-logo span {
+    font-size: 32px;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    font-size: 18px;
+    padding-top: 8px;
+  }
+
+  .hero {
+    padding-top: 72px;
+  }
+}
