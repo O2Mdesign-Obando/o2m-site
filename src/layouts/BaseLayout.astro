@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const {
   title = "O2M Design",
@@ -13,6 +14,9 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
   </head>
 
   <body>
@@ -38,5 +42,7 @@ const {
     <footer>
       © O2M Design
     </footer>
+    
+    <Analytics />
   </body>
 </html>
