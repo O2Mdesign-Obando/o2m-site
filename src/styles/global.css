@@ -335,15 +335,23 @@ a:hover {
   align-self: flex-start;
 }
 
-<script>
-  const button = document.querySelector('.copy-link-button');
+.copy-link-button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--accent, #d33);
+  border-radius: 0;
+  padding: 0 0 0.2rem;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
 
-  button?.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href);
-      button.textContent = 'Link copied';
-    } catch {
-      button.textContent = 'Unable to copy';
-    }
-  });
-</script>
+.copy-link-button:hover {
+  color: var(--accent, #d33);
+}
+
+.copy-link-button:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
