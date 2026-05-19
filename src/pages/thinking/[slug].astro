@@ -48,12 +48,24 @@ const pageDescription = entry.data.excerpt;
       <footer class="article-footer">
         <div>
           <p class="eyebrow">Share</p>
-          <a href={`mailto:?subject=${encodeURIComponent(entry.data.title)}&body=${encodeURIComponent(Astro.url.href)}`}>
-            Share by email
-          </a>
+          <button class="copy-link-button">
+            Copy article link
+          </button>
+          <script>
+            const button = document.querySelector('.copy-link-button');
+
+            button?.addEventListener('click', async () => {
+                try {
+                  await navigator.clipboard.writeText(window.location.href);
+                  button.textContent = 'Link copied';
+                } catch {
+                  button.textContent = 'Unable to copy';
+                }
+              });
+        </script>
         </div>
 
-        <a href="/thinking/archive">Return to archive →</a>
+        <a class="return-link" href="/thinking/archive">Return to archive →</a>
       </footer>
     </article>
   </main>

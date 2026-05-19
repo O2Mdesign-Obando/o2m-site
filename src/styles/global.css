@@ -300,3 +300,50 @@ footer {
   border-color: var(--accent);
   color: inherit;
 }
+
+/* Prevent double underlines on linked elements */
+a:hover {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+/* Thinking pages: remove extra custom underline lines */
+.thinking-card__link,
+.archive-link a,
+.link-grid a,
+.back-link,
+.article-footer a {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* Thinking pages: normalize footer/archive link spacing */
+.article-footer a {
+  display: inline-block;
+  width: auto;
+  padding-bottom: 0;
+}
+
+/* Article back link spacing */
+.back-link {
+  margin-bottom: 3rem;
+}
+
+.return-link {
+  display: inline-block;
+  width: auto;
+  align-self: flex-start;
+}
+
+<script>
+  const button = document.querySelector('.copy-link-button');
+
+  button?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      button.textContent = 'Link copied';
+    } catch {
+      button.textContent = 'Unable to copy';
+    }
+  });
+</script>
