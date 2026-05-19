@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ThinkingEntryCard from '../../components/ThinkingEntryCard.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('thinking'))
+  .filter((entry) => !entry.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+
+const latestEntries = entries.slice(0, 3);
+---
+
+<BaseLayout
+  title="Thinking | O2M Design"
+  description="Reflective systems thinking, continuity-oriented observations, and notes on digital products, operational cognition, and human-AI collaboration."
+>
+  <main class="thinking-page">
+    <section class="thinking-hero">
+      <p class="eyebrow">O2M Thinking</p>
+      <h1>Observations on clarity, systems, and the work of making complexity usable.</h1>
+      <p class="intro">
+        A quiet publishing surface for reflective notes on digital products, operational cognition,
+        human-AI collaboration, and the continuity gaps that shape how people work, decide, and build.
+      </p>
+    </section>
+
+    <section class="thinking-context">
+      <div>
+        <h2>A field journal, not a feed.</h2>
+      </div>
+      <div>
+        <p>
+          These entries are written as continuity-oriented observations: slower, more durable notes
+          about patterns that emerge across design work, systems work, product decisions, and the
+          evolving relationship between people and intelligent tools.
+        </p>
+      </div>
+    </section>
+
+    <section class="thinking-entries">
+      <div class="section-heading">
+        <p class="eyebrow">Recent Entries</p>
+        <h2>Latest observations</h2>
+      </div>
+
+      {latestEntries.length > 0 ? (
+        latestEntries.map((entry) => <ThinkingEntryCard entry={entry} />)
+      ) : (
+        <p>No entries published yet.</p>
+      )}
+
+      <div class="archive-link">
+        <a href="/thinking/archive">View archive →</a>
+      </div>
+    </section>
+
+    <section class="thinking-links">
+      <p class="eyebrow">Continuity Links</p>
+      <div class="link-grid">
+        <a href="/">O2M Design</a>
+        <a href="https://www.jorgeobando.com/">Online Portfolio</a>
+        <a href="https://jorgerobando.com/">Author Hub</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .thinking-page {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 5rem 0 6rem;
+  }
+
+  .thinking-hero {
+    max-width: 780px;
+    padding: 3rem 0 5rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted, #666);
+  }
+
+  .thinking-hero h1 {
+    margin: 0;
+    font-size: clamp(2.35rem, 6vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .intro {
+    max-width: 660px;
+    margin-top: 1.5rem;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--muted, #555);
+  }
+
+  .thinking-context {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 3rem;
+    border-top: 1px solid var(--border, #ddd);
+    border-bottom: 1px solid var(--border, #ddd);
+    padding: 3rem 0;
+    margin-bottom: 5rem;
+  }
+
+  .thinking-context h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.1;
+  }
+
+  .thinking-context p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--muted, #555);
+  }
+
+  .section-heading {
+    margin-bottom: 1rem;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.75rem);
+  }
+
+  .archive-link {
+    margin-top: 2rem;
+  }
+
+  .thinking-links {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border, #ddd);
+  }
+
+  .link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+  }
+
+  .link-grid a {
+    text-decoration: none;
+  }
+
+  .link-grid a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  @media (max-width: 760px) {
+    .thinking-page {
+      padding-top: 3rem;
+    }
+
+    .thinking-context {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

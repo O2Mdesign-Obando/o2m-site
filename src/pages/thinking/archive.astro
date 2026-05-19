@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ThinkingEntryCard from '../../components/ThinkingEntryCard.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('thinking'))
+  .filter((entry) => !entry.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<BaseLayout
+  title="Thinking Archive | O2M Design"
+  description="A longitudinal archive of O2M Design thinking entries on systems, clarity, product design, and continuity."
+>
+  <main class="archive-page">
+    <section class="archive-hero">
+      <p class="eyebrow">Thinking Archive</p>
+      <h1>A continuity archive of systems observations.</h1>
+      <p>
+        Notes on product design, operational clarity, human-AI collaboration, and the patterns that
+        emerge when complex systems become difficult to understand, maintain, or use.
+      </p>
+    </section>
+
+    <section>
+      {entries.length > 0 ? (
+        entries.map((entry) => <ThinkingEntryCard entry={entry} />)
+      ) : (
+        <p>No entries published yet.</p>
+      )}
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .archive-page {
+    width: min(960px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 5rem 0 6rem;
+  }
+
+  .archive-hero {
+    max-width: 720px;
+    padding-bottom: 4rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted, #666);
+  }
+
+  .archive-hero h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .archive-hero p {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--muted, #555);
+  }
+</style>

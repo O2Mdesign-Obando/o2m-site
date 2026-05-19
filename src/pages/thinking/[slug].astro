@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('thinking');
+
+  return entries
+    .filter((entry) => !entry.data.draft)
+    .map((entry) => ({
+      params: { slug: entry.slug },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const formattedDate = new Intl.DateTimeFormat('en', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+}).format(entry.data.publishDate);
+
+const pageDescription = entry.data.excerpt;
+---
+
+<BaseLayout title={`${entry.data.title} | O2M Thinking`} description={pageDescription}>
+  <main class="article-page">
+    <a class="back-link" href="/thinking/archive">← Thinking Archive</a>
+
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">{entry.data.eyebrow}</p>
+        <h1>{entry.data.title}</h1>
+        {entry.data.subtitle && <p class="subtitle">{entry.data.subtitle}</p>}
+
+        <div class="article-meta">
+          <span>{formattedDate}</span>
+          {entry.data.readTime && <span>{entry.data.readTime}</span>}
+        </div>
+      </header>
+
+      <div class="article-body">
+        <Content />
+      </div>
+
+      <footer class="article-footer">
+        <div>
+          <p class="eyebrow">Share</p>
+          <a href={`mailto:?subject=${encodeURIComponent(entry.data.title)}&body=${encodeURIComponent(Astro.url.href)}`}>
+            Share by email
+          </a>
+        </div>
+
+        <a href="/thinking/archive">Return to archive →</a>
+      </footer>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .article-page {
+    width: min(860px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 4rem 0 6rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 3rem;
+    color: var(--muted, #555);
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .article-header {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border, #ddd);
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted, #666);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .subtitle {
+    margin-top: 1.5rem;
+    max-width: 680px;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--muted, #555);
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--muted, #666);
+  }
+
+  .article-meta span + span::before {
+    content: '·';
+    margin-right: 0.75rem;
+  }
+
+  .article-body {
+    padding: 3rem 0;
+    font-size: 1.08rem;
+    line-height: 1.78;
+  }
+
+  .article-body :global(h2) {
+    margin-top: 3rem;
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .article-body :global(h3) {
+    margin-top: 2.25rem;
+    font-size: 1.35rem;
+  }
+
+  .article-body :global(p) {
+    margin: 1.25rem 0;
+  }
+
+  .article-body :global(a) {
+    text-underline-offset: 0.2em;
+  }
+
+  .article-body :global(blockquote) {
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--border, #ddd);
+    color: var(--muted, #555);
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    padding-left: 1.5rem;
+  }
+
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    border-top: 1px solid var(--border, #ddd);
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 680px) {
+    .article-footer {
+      flex-direction: column;
+    }
+  }
+</style>
