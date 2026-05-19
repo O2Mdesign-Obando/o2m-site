@@ -184,4 +184,18 @@ const pageDescription = entry.data.excerpt;
       flex-direction: column;
     }
   }
+  
+  .article-body :global(h2:last-of-type) {
+  margin-top: 3.5rem;
+}
+
+.article-body :global(h2 + ul:last-child) {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted, #555);
+}
+
+.article-body :global(h2 + ul:last-child li) {
+  margin-bottom: 0.75rem;
+}
 </style>
