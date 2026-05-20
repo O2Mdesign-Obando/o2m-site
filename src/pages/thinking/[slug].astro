@@ -7,10 +7,14 @@ export async function getStaticPaths() {
 
   return entries
     .filter((entry) => !entry.data.draft)
-    .map((entry) => ({
-      params: { slug: entry.id },
-      props: { entry },
-    }));
+    .map((entry) => {
+      const slug = entry.id.replace(/\.mdx?$/, '');
+
+      return {
+        params: { slug },
+        props: { entry },
+      };
+    });
 }
 
 const { entry } = Astro.props;

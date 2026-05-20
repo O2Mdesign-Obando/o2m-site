@@ -1,5 +1,6 @@
 ---
 const { entry } = Astro.props;
+const articleSlug = entry.id.replace(/\.mdx?$/, '');
 
 const formattedDate = new Intl.DateTimeFormat('en', {
   month: 'long',
@@ -15,7 +16,7 @@ const formattedDate = new Intl.DateTimeFormat('en', {
   </div>
 
   <h3>
-    <a href={`/thinking/${entry.id}`}>
+    <a href={`/thinking/${articleSlug}`}>
       {entry.data.title}
     </a>
   </h3>
@@ -24,7 +25,7 @@ const formattedDate = new Intl.DateTimeFormat('en', {
 
   <p>{entry.data.excerpt}</p>
 
-  <a class="thinking-card__link" href={`/thinking/${entry.slug}`}>
+  <a class="thinking-card__link" href={`/thinking/${articleSlug}`}>
     Read entry →
   </a>
 </article>
