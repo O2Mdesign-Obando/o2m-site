@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/thinking/undefined",
+      "destination": "/thinking/",
+      "permanent": true
+    }
+  ]
+}
