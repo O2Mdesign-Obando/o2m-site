@@ -12,12 +12,12 @@ You return to a project after a few weeks away. The files are still there. The d
 
 At first glance, nothing appears to be missing. And yet, before meaningful work can continue, you find yourself doing something familiar. You start reconstructing.
 
-Why did we make this decision?  
-What problem were we trying to solve?  
-Which assumptions were still valid?  
-What changed?  
-What was left unresolved?  
-Who owned the next step?
+> Why did we make this decision?  
+> What problem were we trying to solve?  
+> Which assumptions were still valid?  
+> What changed?  
+> What was left unresolved?  
+> Who owned the next step?
 
 The information survived, but the continuity did not.
 
@@ -25,9 +25,9 @@ For most of the digital era, we treated memory as a storage problem. If document
 
 The challenge is not that modern systems forget everything. The challenge is that they often forget the parts that matter most.
 
-Information is stored.
-
-Continuity is preserved.
+> *Information is stored.*
+>
+> *Continuity is preserved.*
 
 Those are very different things. Continuity includes the context surrounding the work. It includes the assumptions people were operating under at the time. It includes the tradeoffs that were accepted, the constraints that shaped the decision, the questions that remained unanswered, and the rationale that connected one action to the next.
 
