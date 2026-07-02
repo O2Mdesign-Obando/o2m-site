@@ -59,9 +59,6 @@ Most AI systems still operate primarily through isolated interactions:
   <p>a prompt,</p>
   <p>a response,</p>
   <p>a result.</p>
-</div>
-
-<div class="article-block">
   <p>But real knowledge work is rarely isolated.</p>
   <p>It evolves over time.</p>
   <p>Context changes.</p>
@@ -87,12 +84,15 @@ Increasingly, the friction people feel is not caused by a lack of intelligence i
 
 The ecosystem itself is beginning to respond to this pressure.
 
-Major platforms are increasingly introducing:
-
-* memory systems
-* personalization layers
-* persistent interaction models
-* continuity-aware environments
+<div class="article-block">
+  <p>Major platforms are increasingly introducing:</p>
+  <ul>
+    <li>memory systems</li>
+    <li>personalization layers</li>
+    <li>persistent interaction models</li>
+    <li>continuity-aware environments</li>
+  </ul>
+</div>
 
 These are early attempts to reduce the cost of repeatedly reconstructing context. Market Intelligence signals from the past several weeks repeatedly point toward this broader shift: AI systems are gradually evolving from stateless tools into continuity-aware interaction environments.
 
@@ -110,14 +110,15 @@ Instead, it may increasingly be defined by systems that can preserve continuity 
 <div class="article-block">
   <p>The challenge is no longer simply helping people produce work.</p>
   <p>It is helping people remain connected to the context surrounding the work:</p>
+  <ul>
+    <li>what changed</li>
+    <li>why it changed</li>
+    <li>what matters now</li>
+    <li>what can be ignored</li>
+    <li>which decisions remain active</li>
+    <li>which assumptions no longer hold</li>
+  </ul>
 </div>
-
-* what changed
-* why it changed
-* what matters now
-* what can be ignored
-* which decisions remain active
-* which assumptions no longer hold
 
 Without continuity, intelligence alone creates more surfaces to manage.
 

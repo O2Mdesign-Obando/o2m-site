@@ -31,15 +31,15 @@ That requires a different kind of interface.
 
 One that does not only answer:
 
-> What can I do here?
-
-But also:
-
-> What happened before I arrived?  
-> Why is this structured this way?  
-> What changed?  
-> What still needs attention?  
-> What should remain stable?
+<div class="article-block">
+  <p>What can I do here?</p>
+  <p>But also:</p>
+  <p>What happened before I arrived?</p>
+  <p>Why is this structured this way?</p>
+  <p>What changed?</p>
+  <p>What still needs attention?</p>
+  <p>What should remain stable?</p>
+</div>
 
 As AI becomes more embedded in digital work, this distinction becomes more important.
 
