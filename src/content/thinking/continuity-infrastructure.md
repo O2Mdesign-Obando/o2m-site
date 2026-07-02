@@ -14,10 +14,12 @@ More clicks. More content. More prompts. More dashboards. More signals. More aut
 
 But in complex work, the deeper problem is often not activity. It is continuity.
 
-The system does not remember why a decision was made.  
-The next person cannot see the logic behind the current state.  
-The tool accelerates output, but not understanding.  
-The organization moves forward while quietly losing context.
+<div class="article-block">
+  <p>The system does not remember why a decision was made.</p>
+  <p>The next person cannot see the logic behind the current state.</p>
+  <p>The tool accelerates output, but not understanding.</p>
+  <p>The organization moves forward while quietly losing context.</p>
+</div>
 
 That is the gap continuity infrastructure tries to address.
 
@@ -41,9 +43,11 @@ But also:
 
 As AI becomes more embedded in digital work, this distinction becomes more important.
 
-Acceleration without continuity creates more fragmentation.  
-Automation without context creates more ambiguity.  
-Intelligence without memory creates more surface area to manage.
+<div class="article-block">
+  <p>Acceleration without continuity creates more fragmentation.</p>
+  <p>Automation without context creates more ambiguity.</p>
+  <p>Intelligence without memory creates more surface area to manage.</p>
+</div>
 
 The opportunity is not just to make systems faster.
 

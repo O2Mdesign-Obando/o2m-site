@@ -158,8 +158,15 @@ const pageDescription = entry.data.excerpt;
     margin: 1.25rem 0;
   }
 
-  .article-body :global(.source-indent) {
-    margin: 1.75rem 0 1.75rem 3.5rem;
+  .article-body :global(blockquote),
+  .article-body :global(.article-block),
+  .article-body :global(.source-indent),
+  .article-body :global(.source-block),
+  .article-body :global(.closing-cadence) {
+    margin: 2rem 0;
+    padding: 0.1rem 0 0.1rem 1.35rem;
+    border-left: 4px solid var(--accent, #ce2928);
+    color: var(--text, #1f1f1f);
     line-height: 1.45;
   }
 
@@ -167,11 +174,9 @@ const pageDescription = entry.data.excerpt;
     font-size: 1.12rem;
   }
 
-  .article-body :global(.source-block) {
-    margin: 1.75rem 0 1.75rem 3.5rem;
-    line-height: 1.45;
-  }
-
+  .article-body :global(blockquote p),
+  .article-body :global(.article-block p),
+  .article-body :global(.closing-cadence p),
   .article-body :global(.source-block p) {
     margin: 0.9rem 0;
   }
@@ -202,15 +207,6 @@ const pageDescription = entry.data.excerpt;
     text-underline-offset: 0.2em;
   }
 
-  .article-body :global(blockquote) {
-    margin: 2rem 0;
-    padding-left: 1.5rem;
-    border-left: 1px solid var(--border, #ddd);
-    color: var(--muted, #555);
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-
   .article-body :global(ul),
   .article-body :global(ol) {
     padding-left: 1.5rem;
@@ -233,12 +229,12 @@ const pageDescription = entry.data.excerpt;
       flex-direction: column;
     }
 
-    .article-body :global(.source-indent) {
-      margin-left: 1.5rem;
-    }
-
-    .article-body :global(.source-block) {
-      margin-left: 1.5rem;
+    .article-body :global(blockquote),
+    .article-body :global(.article-block),
+    .article-body :global(.source-indent),
+    .article-body :global(.source-block),
+    .article-body :global(.closing-cadence) {
+      padding-left: 1rem;
     }
   }
   

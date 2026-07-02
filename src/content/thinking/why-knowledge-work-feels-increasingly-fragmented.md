@@ -55,23 +55,20 @@ This becomes even more pronounced when AI enters the workflow.
 
 Most AI systems still operate primarily through isolated interactions:
 
-a prompt,
+<div class="article-block">
+  <p>a prompt,</p>
+  <p>a response,</p>
+  <p>a result.</p>
+</div>
 
-a response,
-
-a result.
-
-But real knowledge work is rarely isolated.
-
-It evolves over time.
-
-Context changes.
-
-Decisions accumulate.
-
-Constraints shift.
-
-Relationships between pieces of information matter.
+<div class="article-block">
+  <p>But real knowledge work is rarely isolated.</p>
+  <p>It evolves over time.</p>
+  <p>Context changes.</p>
+  <p>Decisions accumulate.</p>
+  <p>Constraints shift.</p>
+  <p>Relationships between pieces of information matter.</p>
+</div>
 
 And continuity becomes increasingly fragile as the number of systems grows.
 
@@ -81,9 +78,10 @@ The systems are often highly capable at producing outputs, but far less capable 
 
 That distinction matters.
 
-Because knowledge work is not merely the production of information.
-
-It is the coordination of meaning across time.
+<div class="article-block">
+  <p>Because knowledge work is not merely the production of information.</p>
+  <p>It is the coordination of meaning across time.</p>
+</div>
 
 Increasingly, the friction people feel is not caused by a lack of intelligence inside the systems. It is caused by the growing burden of maintaining coherence between them.
 
@@ -109,9 +107,10 @@ Because it suggests the next phase of digital work may not be defined primarily 
 
 Instead, it may increasingly be defined by systems that can preserve continuity across fragmented operational environments.
 
-The challenge is no longer simply helping people produce work.
-
-It is helping people remain connected to the context surrounding the work:
+<div class="article-block">
+  <p>The challenge is no longer simply helping people produce work.</p>
+  <p>It is helping people remain connected to the context surrounding the work:</p>
+</div>
 
 * what changed
 * why it changed
