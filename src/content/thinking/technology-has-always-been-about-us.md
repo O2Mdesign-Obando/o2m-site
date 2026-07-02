@@ -10,15 +10,15 @@ draft: false
 
 <div class="source-block source-compact source-italic">
   <p><em>Every technology begins with the same two words.</em></p>
-  <p class="source-emphasis"><strong><em>What if?</em></strong></p>
-  <p><em>What if we could remember more? Writing.</em></p>
+  <p class="source-emphasis source-pause-before"><strong><em>What if?</em></strong></p>
+  <p class="source-pause-before"><em>What if we could remember more? Writing.</em></p>
   <p><em>What if we could travel farther? The wheel.</em></p>
   <p><em>What if we could communicate across oceans? The telegraph.</em></p>
   <p><em>What if we could share knowledge instantly? The Internet.</em></p>
   <p><em>What if we could reason alongside machines? AI.</em></p>
-  <p><em>That isn't an AI story.</em></p>
+  <p class="source-pause-before"><em>That isn't an AI story.</em></p>
   <p><em>That's a human story.</em></p>
-  <p><em>And it begins with <strong>imagination</strong>.</em></p>
+  <p class="source-pause-before"><em>And it begins with <strong>imagination</strong>.</em></p>
 </div>
 
 Every major technological shift seems to arrive with a familiar feeling: a little wonder, a little uncertainty, and a quiet sense that something around us is beginning to change.
