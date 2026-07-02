@@ -8,15 +8,24 @@ readTime: "5 min read"
 draft: false
 ---
 
-<p><em>Every technology begins with the same two words.</em></p>
+<p class="source-indent source-italic"><em>Every technology begins with the same two words.</em></p>
 
 <p class="source-indent source-emphasis"><strong><em>What if?</em></strong></p>
 
-<p class="source-indent"><em>What if we could remember more? Writing.<br />What if we could travel farther? The wheel.<br />What if we could communicate across oceans? The telegraph.<br />What if we could share knowledge instantly? The Internet.<br />What if we could reason alongside machines? AI.</em></p>
+<div class="source-block source-compact source-italic">
+  <p><em>What if we could remember more? Writing.</em></p>
+  <p><em>What if we could travel farther? The wheel.</em></p>
+  <p><em>What if we could communicate across oceans? The telegraph.</em></p>
+  <p><em>What if we could share knowledge instantly? The Internet.</em></p>
+  <p><em>What if we could reason alongside machines? AI.</em></p>
+</div>
 
-<p class="source-indent"><em>That isn't an AI story.<br />That's a human story.</em></p>
+<div class="source-block source-compact source-italic">
+  <p><em>That isn't an AI story.</em></p>
+  <p><em>That's a human story.</em></p>
+</div>
 
-<p><em>And it begins with <strong>imagination</strong>.</em></p>
+<p class="source-indent source-italic"><em>And it begins with <strong>imagination</strong>.</em></p>
 
 Every major technological shift seems to arrive with a familiar feeling: a little wonder, a little uncertainty, and a quiet sense that something around us is beginning to change.
 
@@ -30,11 +39,11 @@ Somewhere along the way, technology became a word we mostly use for screens, sof
 
 But it has always been much older, and much more human, than that.
 
-A hammer is technology.
-
-Writing is technology.
-
-So are the wheel, the telescope, the printing press, the calculator, and the Internet.
+<div class="source-block">
+  <p>A hammer is technology.</p>
+  <p>Writing is technology.</p>
+  <p>So are the wheel, the telescope, the printing press, the calculator, and the Internet.</p>
+</div>
 
 They arrived in different centuries, under different conditions, but they all tell the same story.
 
@@ -44,29 +53,28 @@ That may be the clearest way to understand technology.
 
 It is the deliberate creation of tools, methods, and systems that help us reach beyond what we could do on our own.
 
-A hammer extends strength.
-
-Writing extends memory.
-
-A telescope extends sight.
-
-A calculator extends arithmetic.
+<div class="source-block">
+  <p>A hammer extends strength.</p>
+  <p>Writing extends memory.</p>
+  <p>A telescope extends sight.</p>
+  <p>A calculator extends arithmetic.</p>
+</div>
 
 Artificial intelligence is beginning to extend parts of reasoning, synthesis, and pattern recognition—the kinds of work that once felt much closer to the center of human judgment. Different in degree, perhaps, but not entirely different in kind from the tools that came before it.
 
-The underlying pattern has never changed.
-
-Only the tools have.
-
-And neither has our response.
+<div class="source-block">
+  <p>The underlying pattern has never changed.</p>
+  <p>Only the tools have.</p>
+  <p>And neither has our response.</p>
+</div>
 
 And each time a new tool stretches what people can do, we tend to meet it with the same uneasy mix of hope and hesitation.
 
-One is the fear of missing out.
-
-The other is the fear of being left behind.
-
-Most of us live somewhere between those two feelings.
+<div class="source-block">
+  <p>One is the fear of missing out.</p>
+  <p>The other is the fear of being left behind.</p>
+  <p>Most of us live somewhere between those two feelings.</p>
+</div>
 
 We open LinkedIn and see another breakthrough, another model, another benchmark, another prediction about the future of work.
 
@@ -74,13 +82,25 @@ After a while, the pace can make it feel as if everyone else has already found t
 
 The pressure builds quietly.
 
-<p class="source-indent">Stay current.<br />Learn the newest model.<br />Try the latest feature.<br />Move faster.<br />Do more.<br />Fall behind at your own risk.</p>
+<div class="source-block">
+  <p>Stay current.</p>
+  <p>Learn the newest model.</p>
+  <p>Try the latest feature.</p>
+  <p>Move faster.</p>
+  <p>Do more.</p>
+  <p>Fall behind at your own risk.</p>
+</div>
 
 At the same time, a quieter set of questions begins to surface.
 
 If intelligent systems can now draft, summarize, recommend, and automate more of the work…
 
-<p class="source-indent">What happens to the value of lived experience, practiced judgment, and hard-earned intuition?<br />Will my judgment still matter?<br />Am I still learning, or am I simply accepting suggestions?<br />How do I know when to trust the system—and when to question it?</p>
+<div class="source-block">
+  <p>What happens to the value of lived experience, practiced judgment, and hard-earned intuition?</p>
+  <p>Will my judgment still matter?</p>
+  <p>Am I still learning, or am I simply accepting suggestions?</p>
+  <p>How do I know when to trust the system—and when to question it?</p>
+</div>
 
 These questions are not signs that people are resisting the future.
 
@@ -88,15 +108,13 @@ They are signs that people are paying close attention to what the future is aski
 
 For much of the past two years, the conversation around AI has been pulled toward capability.
 
-What can the models do?
-
-How accurate are they?
-
-How quickly are they improving?
-
-Those questions matter.
-
-But they are not the whole story.
+<div class="source-block">
+  <p>What can the models do?</p>
+  <p>How accurate are they?</p>
+  <p>How quickly are they improving?</p>
+  <p>Those questions matter.</p>
+  <p>But they are not the whole story.</p>
+</div>
 
 The more important question is not only what intelligent systems can do.
 
@@ -104,7 +122,14 @@ It is what happens to people when these systems move from the edges of our work 
 
 That changes the shape of the conversation.
 
-<p class="source-indent">Away from technology.<br />Back toward ourselves.<br />Our judgment.<br />Our curiosity.<br />Our responsibility.<br />Our ability to continue learning.</p>
+<div class="source-block">
+  <p>Away from technology.</p>
+  <p>Back toward ourselves.</p>
+  <p>Our judgment.</p>
+  <p>Our curiosity.</p>
+  <p>Our responsibility.</p>
+  <p>Our ability to continue learning.</p>
+</div>
 
 And that is where AI becomes less a story about machines getting smarter and more a story about people deciding how they want to keep growing.
 
@@ -132,11 +157,12 @@ They are asking how to build better relationships with them.
 
 They are asking how to keep human review, judgment, verification, and oversight where they belong: close to the center of the work.
 
-Not because intelligent systems are incapable.
-
-Because capability does not remove responsibility.
-
-<p class="source-indent">Automation may complete tasks.<br />Capability develops people.</p>
+<div class="source-block">
+  <p>Not because intelligent systems are incapable.</p>
+  <p>Because capability does not remove responsibility.</p>
+  <p>Automation may complete tasks.</p>
+  <p>Capability develops people.</p>
+</div>
 
 Those ideas should never compete.
 
@@ -156,17 +182,26 @@ The technology will become familiar, almost invisible in the background.
 
 The human questions will remain.
 
-How do we continue learning?
-
-How do we preserve judgment?
-
-How do we stay thoughtful as increasingly intelligent tools become part of everyday life?
+<div class="source-block">
+  <p>How do we continue learning?</p>
+  <p>How do we preserve judgment?</p>
+  <p>How do we stay thoughtful as increasingly intelligent tools become part of everyday life?</p>
+</div>
 
 Perhaps that is the real opportunity before us. Not simply to build more capable technology, but to become more capable people.
 
-<p class="source-indent"><em>The history of technology is the history of human imagination expanding human capability.<br />The history of technology is not the history of machines becoming more capable.<br />It is the history of people learning who to become next.</em></p>
+<div class="source-block source-compact source-italic source-standalone">
+  <p><em>The history of technology is the history of human imagination expanding human capability.</em></p>
+  <p><em>The history of technology is not the history of machines becoming more capable.</em></p>
+  <p><em>It is the history of people learning who to become next.</em></p>
+</div>
 
-<p class="source-indent">Technology will continue to become more capable.<br />Our responsibility is to continue becoming more capable alongside it.<br />The best intelligent tools will not make the human disappear.<br />They will help us remain thoughtful, capable, and present in the work.</p>
+<div class="closing-cadence">
+  <p>Technology will continue to become more capable.</p>
+  <p>Our responsibility is to continue becoming more capable alongside it.</p>
+  <p>The best intelligent tools will not make the human disappear.</p>
+  <p>They will help us remain thoughtful, capable, and present in the work.</p>
+</div>
 
 ## Signals Worth Watching
 

@@ -167,6 +167,37 @@ const pageDescription = entry.data.excerpt;
     font-size: 1.12rem;
   }
 
+  .article-body :global(.source-block) {
+    margin: 1.75rem 0 1.75rem 3.5rem;
+    line-height: 1.45;
+  }
+
+  .article-body :global(.source-block p) {
+    margin: 0.9rem 0;
+  }
+
+  .article-body :global(.source-compact p) {
+    margin: 0.15rem 0;
+  }
+
+  .article-body :global(.source-italic) {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+  }
+
+  .article-body :global(.source-standalone) {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .article-body :global(.closing-cadence) {
+    margin: 3.5rem 0;
+  }
+
+  .article-body :global(.closing-cadence p) {
+    margin: 1.45rem 0;
+  }
+
   .article-body :global(a) {
     text-underline-offset: 0.2em;
   }
@@ -203,6 +234,10 @@ const pageDescription = entry.data.excerpt;
     }
 
     .article-body :global(.source-indent) {
+      margin-left: 1.5rem;
+    }
+
+    .article-body :global(.source-block) {
       margin-left: 1.5rem;
     }
   }
