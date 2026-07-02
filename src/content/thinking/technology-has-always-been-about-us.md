@@ -184,18 +184,19 @@ The human questions will remain.
 
 Perhaps that is the real opportunity before us. Not simply to build more capable technology, but to become more capable people.
 
-<p><em>The history of technology is the history of human imagination expanding human capability.</em></p>
-
-<p><em>The history of technology is not the history of machines becoming more capable.</em></p>
-
-<p><em>It is the history of people learning who to become next.</em></p>
-
-<div class="closing-cadence">
-  <p>Technology will continue to become more capable.</p>
-  <p>Our responsibility is to continue becoming more capable alongside it.</p>
-  <p>The best intelligent tools will not make the human disappear.</p>
-  <p>They will help us remain thoughtful, capable, and present in the work.</p>
+<div class="source-block source-compact source-italic">
+  <p><em>The history of technology is the history of human imagination expanding human capability.</em></p>
+  <p><em>The history of technology is not the history of machines becoming more capable.</em></p>
+  <p><em>It is the history of people learning who to become next.</em></p>
 </div>
+
+Technology will continue to become more capable.
+
+Our responsibility is to continue becoming more capable alongside it.
+
+The best intelligent tools will not make the human disappear.
+
+They will help us remain thoughtful, capable, and present in the work.
 
 ## Signals Worth Watching
 
