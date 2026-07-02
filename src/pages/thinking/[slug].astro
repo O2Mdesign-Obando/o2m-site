@@ -19,6 +19,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const articleSlug = entry.id.replace(/\.mdx?$/, '');
 
 const formattedDate = new Intl.DateTimeFormat('en', {
   month: 'long',
@@ -53,16 +54,43 @@ const pageDescription = entry.data.excerpt;
       <footer class="article-footer">
         <div>
           <p class="eyebrow">Share</p>
-          <button class="copy-link-button" type="button">
+          <button
+            class="copy-link-button"
+            type="button"
+            data-article-slug={articleSlug}
+            data-article-title={entry.data.title}
+          >
             Copy article link
           </button>
           <script>
             const button = document.querySelector('.copy-link-button');
+            const analyticsEvents = {
+              copyArticleLink: 'copy_article_link',
+            };
+
+            const trackPublishingEvent = (name, data) => {
+              window.va =
+                window.va ||
+                function (...params) {
+                  window.vaq = window.vaq || [];
+                  window.vaq.push(params);
+                };
+
+              window.va('event', {
+                name,
+                data,
+              });
+            };
 
             button?.addEventListener('click', async () => {
                 try {
                   await navigator.clipboard.writeText(window.location.href);
                   button.textContent = 'Link copied';
+                  trackPublishingEvent(analyticsEvents.copyArticleLink, {
+                    article_slug: button.dataset.articleSlug,
+                    article_title: button.dataset.articleTitle,
+                    page_path: window.location.pathname,
+                  });
                 } catch {
                   button.textContent = 'Unable to copy';
                 }
