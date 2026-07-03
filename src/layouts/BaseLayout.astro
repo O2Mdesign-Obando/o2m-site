@@ -5,6 +5,11 @@ const {
   title = "O2M Design",
   description = "Product design, UX/UI, systems thinking, and digital experiences.",
 } = Astro.props;
+
+const canonicalHost = "https://www.o2mdesign.com";
+const pathname = Astro.url.pathname;
+const canonicalPath = pathname === "/" ? "/" : pathname.replace(/\/$/, "");
+const canonicalUrl = `${canonicalHost}${canonicalPath}`;
 ---
 
 <html lang="en">
@@ -13,14 +18,12 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
     <script defer src="/_vercel/insights/script.js"></script>
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.o2mdesign.com" />
   </head>
 
   <body>
