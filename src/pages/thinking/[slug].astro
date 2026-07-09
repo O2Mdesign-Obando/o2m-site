@@ -188,6 +188,8 @@ const pageDescription = entry.data.excerpt;
 
   .article-body :global(blockquote),
   .article-body :global(.article-block),
+  .article-body :global(.article-reflection),
+  .article-body :global(.article-stack),
   .article-body :global(.source-indent),
   .article-body :global(.source-block),
   .article-body :global(.closing-cadence) {
@@ -202,11 +204,26 @@ const pageDescription = entry.data.excerpt;
     font-size: 1.12rem;
   }
 
+  .article-body :global(.article-reflection) {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+  }
+
   .article-body :global(blockquote p),
   .article-body :global(.article-block p),
   .article-body :global(.closing-cadence p),
   .article-body :global(.source-block p) {
     margin: 0.9rem 0;
+  }
+
+  .article-body :global(.article-reflection p),
+  .article-body :global(.article-stack p) {
+    margin: 0.45rem 0;
+  }
+
+  .article-body :global(.article-stack p.source-pause-before) {
+    margin-top: 1.35rem;
   }
 
   .article-body :global(.article-block ul),
@@ -269,6 +286,8 @@ const pageDescription = entry.data.excerpt;
 
     .article-body :global(blockquote),
     .article-body :global(.article-block),
+    .article-body :global(.article-reflection),
+    .article-body :global(.article-stack),
     .article-body :global(.source-indent),
     .article-body :global(.source-block),
     .article-body :global(.closing-cadence) {
