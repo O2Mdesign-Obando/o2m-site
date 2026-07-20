@@ -236,6 +236,31 @@ const pageDescription = entry.data.excerpt;
     margin-top: 1.35rem;
   }
 
+  .article-body :global(.article-plain-stack),
+  .article-body :global(.article-indented) {
+    margin: 1.5rem 0;
+    color: var(--text, #1f1f1f);
+    line-height: 1.45;
+  }
+
+  .article-body :global(.article-indented) {
+    padding-left: 1.35rem;
+  }
+
+  .article-body :global(.article-plain-stack p),
+  .article-body :global(.article-indented p) {
+    margin: 0.45rem 0;
+  }
+
+  .article-body :global(.article-plain-stack p.source-pause-before),
+  .article-body :global(.article-indented p.source-pause-before) {
+    margin-top: 1.35rem;
+  }
+
+  .article-body :global(.article-ending-stack) {
+    margin: 2.25rem 0;
+  }
+
   .article-body :global(.article-block ul),
   .article-body :global(.article-block ol) {
     margin: 0.9rem 0;
