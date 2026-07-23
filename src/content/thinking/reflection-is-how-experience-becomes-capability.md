@@ -5,7 +5,7 @@ eyebrow: "Human Capability"
 excerpt: "Experience does not automatically become wisdom. Reflection helps people turn what happened into meaning, judgment, and capability."
 publishDate: 2026-07-23
 readTime: "3 min read"
-draft: true
+draft: false
 ---
 
 Experience has always been one of our greatest teachers, but only when we make time to learn from it.
