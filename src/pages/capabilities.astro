@@ -1,0 +1,494 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Expanded Capabilities | O2M Design";
+const description = "Senior O2M product and design leadership with broader research, specialist, and delivery capability through collaboration with YUJ Designs.";
+
+const capabilityGroups = [
+  {
+    title: "Product & Design Leadership",
+    owner: "O2M",
+    items: [
+      "Product strategy",
+      "Product design",
+      "UX/UI",
+      "Systems thinking",
+      "Complex enterprise experience design",
+      "Senior stakeholder collaboration",
+    ],
+  },
+  {
+    title: "Research & Delivery at Scale",
+    owner: "YUJ",
+    items: [
+      "UX design and development",
+      "Qualitative and quantitative research",
+      "User testing",
+      "UX strategy",
+      "Design systems",
+      "UX audits",
+      "Embedded and specialist design capacity",
+    ],
+  },
+  {
+    title: "AI & Workflow Orchestration",
+    owner: "O2M + YUJ",
+    items: [
+      "Agentic workflow exploration",
+      "Human-AI interaction",
+      "Workflow orchestration",
+      "Multi-agent workflow design",
+      "Human-in-the-loop operating models",
+      "YOXA by YUJ, where appropriate",
+    ],
+  },
+];
+
+const engagementModels = [
+  {
+    title: "O2M-led",
+    lead: "Small, senior, close.",
+    paragraphs: [
+      "O2M leads the engagement directly, with senior U.S.-based product and design partnership throughout the work.",
+      "Best suited to focused strategy, product definition, complex experience design, and situations where proximity to decision-makers matters most.",
+    ],
+  },
+  {
+    title: "Joint delivery",
+    lead: "Broader capability around one engagement.",
+    paragraphs: [
+      "O2M and YUJ collaborate when the work requires additional disciplines such as research, design systems, testing, specialist UX expertise, development support, or greater delivery capacity.",
+      "O2M can continue to provide close product and stakeholder leadership while the engagement expands around the needs of the work.",
+    ],
+  },
+  {
+    title: "Scaled delivery",
+    lead: "More specialist capacity when the program demands it.",
+    paragraphs: [
+      "Larger programs can draw on broader YUJ specialist and delivery capacity while maintaining appropriate O2M involvement in U.S.-based stakeholder alignment, product thinking, and experience direction.",
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} robots="noindex, nofollow">
+  <main>
+    <section class="hero capabilities-hero">
+      <div class="eyebrow">Expanded capability · Direct partnership</div>
+      <h1>Senior partnership when you need it.<br />More capacity when the work demands it.</h1>
+      <p>
+        O2M Design and YUJ Designs are collaborating to give clients a flexible way to combine
+        U.S.-based product and design leadership with global UX, research, and delivery capability.
+      </p>
+    </section>
+
+    <section class="section intro-section">
+      <h2>One relationship. Broader capability.</h2>
+      <div class="prose-stack">
+        <p>Some problems need a small, senior team working closely with the people making the decisions.</p>
+        <p>Others need broader research, specialist expertise, or additional delivery capacity.</p>
+        <p>
+          O2M Design and YUJ Designs remain independent practices. When the work calls for it, we can
+          collaborate around the engagement so clients gain access to broader capability without losing
+          the direct, senior partnership that defines O2M.
+        </p>
+        <p class="closing-line">The engagement shapes the team — not the other way around.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div class="eyebrow">What the collaboration brings</div>
+        <h2>Complementary capability, assembled around the work.</h2>
+      </div>
+      <div class="capability-grid">
+        {capabilityGroups.map((group) => (
+          <article class="card capability-card">
+            <div>
+              <span class="card-owner">{group.owner}</span>
+              <h3>{group.title}</h3>
+            </div>
+            <ul>
+              {group.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section engagement-section">
+      <div class="section-heading">
+        <h2>Built around the engagement, not the org chart.</h2>
+        <p>
+          Different problems require different levels of involvement, specialization, and delivery
+          capacity. The collaboration allows the team to take shape around the work rather than forcing
+          every engagement into the same model.
+        </p>
+      </div>
+      <div class="engagement-list">
+        {engagementModels.map((model, index) => (
+          <article class="engagement-model">
+            <div class="model-label">
+              <span>0{index + 1}</span>
+              <h3>{model.title}</h3>
+            </div>
+            <div class="model-copy">
+              <p class="model-lead">{model.lead}</p>
+              {model.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="yoxa-section">
+      <div class="yoxa-inner">
+        <div class="yoxa-label">YOXA by YUJ</div>
+        <div class="yoxa-content">
+          <h2>From experience design to intelligent workflows.</h2>
+          <p>
+            Our collaboration with YUJ also gives O2M clients a path to explore intelligent workflow
+            orchestration through <strong>YOXA by YUJ</strong>, YUJ's agentic AI platform.
+          </p>
+          <p>
+            YOXA is designed to help organizations create, test, and deploy multi-agent workflows that
+            can operate with shared context while preserving meaningful human involvement.
+          </p>
+          <p>
+            This opens a path beyond designing individual screens or interactions toward examining how
+            people, systems, AI agents, decisions, and business processes can work together across a
+            larger workflow.
+          </p>
+          <div class="yoxa-points">
+            <p>Where appropriate, engagements may explore:</p>
+            <ul>
+              <li>Multi-agent workflow orchestration</li>
+              <li>Agent creation, testing, and deployment</li>
+              <li>Shared context across agents and workflow stages</li>
+              <li>Human-in-the-loop review and decision points</li>
+              <li>Business workflow orchestration</li>
+              <li>The relationship between experience design and intelligent operational systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section standards-section">
+      <div class="standards-copy">
+        <h2>Different capabilities. Shared standards.</h2>
+        <p>The value of broader capability only matters if the work remains coherent.</p>
+        <p>
+          O2M and YUJ share an emphasis on designing around real people, real systems, and real operating
+          conditions rather than treating design as surface decoration.
+        </p>
+        <p>Across an engagement, that means bringing together:</p>
+      </div>
+      <ul class="standards-list">
+        <li>Systems thinking</li>
+        <li>Human-centered design</li>
+        <li>Evidence over assumption</li>
+        <li>Responsible human-AI relationships</li>
+        <li>Senior collaboration</li>
+        <li>Scalable delivery</li>
+      </ul>
+      <div class="standards-close">
+        <p>The goal is not simply to add more people to a project.</p>
+        <p>
+          It is to assemble the capability the problem actually requires — while keeping the work
+          understandable, intentional, and connected to the people responsible for making it real.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-block final-cta">
+      <div class="contact-inner">
+        <h2>Tell us what you're trying to build.</h2>
+        <p class="cta-support">We'll assemble the right capability around the work.</p>
+        <p><a href="mailto:connect@o2mdesign.com">Start a conversation →</a></p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .capabilities-hero {
+    padding-top: 112px;
+    padding-bottom: 92px;
+  }
+
+  .capabilities-hero h1 {
+    max-width: 1040px;
+    font-size: clamp(46px, 6.2vw, 76px);
+  }
+
+  .capabilities-hero p {
+    max-width: 780px;
+    font-size: 20px;
+  }
+
+  .intro-section {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+    gap: 72px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .prose-stack p {
+    margin-top: 0;
+  }
+
+  .prose-stack .closing-line {
+    margin-top: 32px;
+    font-weight: 700;
+  }
+
+  .section-heading {
+    max-width: 780px;
+  }
+
+  .capability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 36px;
+  }
+
+  .capability-card {
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-owner {
+    color: var(--accent);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 23px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-top: 8px;
+  }
+
+  .engagement-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .engagement-list {
+    border-top: 1px solid var(--line);
+    margin-top: 42px;
+  }
+
+  .engagement-model {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.8fr) minmax(0, 1.5fr);
+    gap: 56px;
+    padding: 38px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .model-label span {
+    color: var(--accent);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+
+  .model-copy p {
+    font-size: 16px;
+    margin: 12px 0 0;
+  }
+
+  .model-copy .model-lead {
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  .yoxa-section {
+    background: var(--text);
+    color: #fff;
+    padding: 82px 20px;
+  }
+
+  .yoxa-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.6fr);
+    gap: 64px;
+  }
+
+  .yoxa-label {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .yoxa-content h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    max-width: 720px;
+    margin-bottom: 30px;
+  }
+
+  .yoxa-content p {
+    max-width: 760px;
+  }
+
+  .yoxa-points {
+    border-top: 1px solid #555;
+    margin-top: 38px;
+    padding-top: 26px;
+  }
+
+  .yoxa-points p,
+  .yoxa-points li {
+    font-size: 16px;
+  }
+
+  .yoxa-points ul {
+    columns: 2;
+    column-gap: 46px;
+  }
+
+  .yoxa-points li {
+    break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  .standards-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.75fr;
+    gap: 28px 72px;
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .standards-list {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .standards-list li {
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+    margin: 0;
+    padding: 11px 0;
+  }
+
+  .standards-close {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line);
+    margin-top: 24px;
+    padding-top: 30px;
+  }
+
+  .standards-close p:last-child {
+    font-weight: 700;
+  }
+
+  .final-cta {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(34px, 4vw, 52px);
+  }
+
+  .cta-support {
+    color: #d8d8d8;
+  }
+
+  .final-cta a {
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 760px) {
+    .capabilities-hero {
+      padding-top: 72px;
+      padding-bottom: 62px;
+    }
+
+    .capabilities-hero h1 {
+      font-size: clamp(40px, 11.6vw, 52px);
+      line-height: 1.02;
+    }
+
+    .capabilities-hero p {
+      font-size: 18px;
+    }
+
+    .intro-section,
+    .engagement-model,
+    .yoxa-inner,
+    .standards-section {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+
+    .intro-section,
+    .engagement-section,
+    .standards-section {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+
+    .capability-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .capability-card {
+      min-height: 0;
+      gap: 28px;
+    }
+
+    .engagement-model {
+      padding: 32px 0;
+    }
+
+    .yoxa-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .yoxa-points ul {
+      columns: 1;
+    }
+
+    .standards-close {
+      grid-column: auto;
+      margin-top: 8px;
+    }
+
+    .final-cta {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+  }
+</style>
