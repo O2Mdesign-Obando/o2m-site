@@ -33,13 +33,16 @@ const description = "Products and operating environments built by O2M Design, in
           <a href="https://cognitstudio.com" target="_blank" rel="noopener noreferrer">Visit Cognit Studio →</a>
         </div>
 
-        <div class="product-visual cognit-studio-visual" aria-label="Reserved media area for future Cognit Studio product evidence">
-          <div class="brand-field">
-            <span>Operating brand</span>
-            <strong>Cognit Studio</strong>
-          </div>
-          <p>Product evidence reserved for the next review.</p>
-        </div>
+        <figure class="product-visual">
+          <img
+            src="/products/cognit-studio.png"
+            alt="Cognit Studio homepage showing its connected systems product environment"
+            width="1383"
+            height="744"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       </article>
 
       <article class="product-entry product-entry-reverse">
@@ -51,14 +54,16 @@ const description = "Products and operating environments built by O2M Design, in
           <a href="https://cognitlearning.com" target="_blank" rel="noopener noreferrer">Visit Cognit Learning →</a>
         </div>
 
-        <div class="product-visual cognit-learning-visual" aria-label="Reserved media area for future Cognit Learning Hub product evidence">
-          <div class="brand-field">
-            <span>Product family</span>
-            <strong>Cognit Learning</strong>
-            <small>Cognit Learning Hub</small>
-          </div>
-          <p>Learning Hub evidence reserved for the next review.</p>
-        </div>
+        <figure class="product-visual">
+          <img
+            src="/products/cognit-learning-hub.png"
+            alt="Cognit Learning Hub learner dashboard"
+            width="1163"
+            height="895"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       </article>
 
       <article class="product-entry">
@@ -70,14 +75,16 @@ const description = "Products and operating environments built by O2M Design, in
           <a href="https://thequietnotebook.com" target="_blank" rel="noopener noreferrer">Visit The Quiet Notebook →</a>
         </div>
 
-        <div class="product-visual quiet-notebook-visual" aria-label="Reserved media area for future Quiet Notebook and Quiet Room product evidence">
-          <div class="brand-field">
-            <span>Editorial environment</span>
-            <strong>The Quiet Notebook</strong>
-            <small>The Quiet Room / Quiet Corner</small>
-          </div>
-          <p>Editorial evidence reserved for the next review.</p>
-        </div>
+        <figure class="product-visual">
+          <img
+            src="/products/the-quiet-notebook.png"
+            alt="The Quiet Notebook homepage"
+            width="1445"
+            height="765"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       </article>
     </section>
   </main>
@@ -181,76 +188,17 @@ const description = "Products and operating environments built by O2M Design, in
   }
 
   .product-visual {
-    min-height: 420px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid var(--line);
-    background: var(--card);
-  }
-
-  .product-visual::after {
-    content: "";
-    display: block;
-    width: 42%;
-    border-top: 1px solid var(--accent);
-  }
-
-  .product-visual p {
+    align-self: center;
     margin: 0;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
-  .brand-field {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 390px;
-  }
-
-  .brand-field span {
-    margin-bottom: 24px;
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .brand-field strong {
-    font-size: clamp(34px, 4.4vw, 58px);
-    line-height: 1;
-  }
-
-  .brand-field small {
-    margin-top: 20px;
-    color: var(--muted);
-    font-size: 15px;
-  }
-
-  .cognit-studio-visual {
+    overflow: hidden;
+    border: 1px solid var(--line);
     background: #fff;
   }
 
-  .cognit-learning-visual {
-    background: #f1efea;
-  }
-
-  .quiet-notebook-visual {
-    background: var(--text);
-    color: #fff;
-  }
-
-  .quiet-notebook-visual .brand-field span,
-  .quiet-notebook-visual .brand-field small,
-  .quiet-notebook-visual p {
-    color: #c8c8c8;
-  }
-
-  .quiet-notebook-visual::after {
-    border-top-color: #fff;
+  .product-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   @media (max-width: 820px) {
@@ -279,10 +227,6 @@ const description = "Products and operating environments built by O2M Design, in
     .product-entry-reverse .product-copy {
       grid-row: 1;
     }
-
-    .product-visual {
-      min-height: 340px;
-    }
   }
 
   @media (max-width: 520px) {
@@ -307,15 +251,6 @@ const description = "Products and operating environments built by O2M Design, in
     .product-entry {
       gap: 34px;
       padding: 52px 0;
-    }
-
-    .product-visual {
-      min-height: 270px;
-      padding: 28px;
-    }
-
-    .brand-field strong {
-      font-size: 34px;
     }
   }
 </style>
