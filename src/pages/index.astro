@@ -70,6 +70,74 @@ const description = "Product design, UX/UI, and digital experience design for bu
     </p>
   </section>
 
+  <section class="section building-section" aria-labelledby="building-heading">
+    <header class="building-intro">
+      <div class="eyebrow">O2M Products &amp; Systems</div>
+      <h2 id="building-heading">What We’re Building</h2>
+      <p class="building-lead">
+        <strong>Our work has increasingly moved beyond designing products for others. We also build and operate products of our own.</strong>
+      </p>
+      <p>
+        The same ideas that shape our client work — continuity, clarity, thoughtful interaction, responsible intelligence, and systems that can evolve without losing their thread — now live in a growing family of products and environments.
+      </p>
+    </header>
+
+    <div class="product-portfolio">
+      <article class="product-entry">
+        <div class="product-copy">
+          <div class="product-index">01</div>
+          <h3>Cognit Studio</h3>
+          <p class="product-description">Connected products and systems for how people learn, think, create, work, and continue.</p>
+          <p class="product-relationship">Cognit Studio is an operating brand of O2M Design, LLC.</p>
+          <a href="https://cognitstudio.com" target="_blank" rel="noopener noreferrer">Visit Cognit Studio →</a>
+        </div>
+        <div class="product-visual cognit-studio-visual" aria-label="Reserved media area for future Cognit Studio product evidence">
+          <div class="brand-field">
+            <span>Operating brand</span>
+            <strong>Cognit Studio</strong>
+          </div>
+          <p>Product evidence reserved for the next review.</p>
+        </div>
+      </article>
+
+      <article class="product-entry product-entry-reverse">
+        <div class="product-copy">
+          <div class="product-index">02</div>
+          <h3>Cognit Learning</h3>
+          <p class="product-description">A connected learning product family built around the responsibilities of Centers, Coaches, Students, Families, and networks.</p>
+          <p class="product-reference"><strong>Cognit Learning Hub</strong> is the current primary product within the Cognit Learning family.</p>
+          <a href="https://cognitlearning.com" target="_blank" rel="noopener noreferrer">Visit Cognit Learning →</a>
+        </div>
+        <div class="product-visual cognit-learning-visual" aria-label="Reserved media area for future Cognit Learning Hub product evidence">
+          <div class="brand-field">
+            <span>Product family</span>
+            <strong>Cognit Learning</strong>
+            <small>Cognit Learning Hub</small>
+          </div>
+          <p>Learning Hub evidence reserved for the next review.</p>
+        </div>
+      </article>
+
+      <article class="product-entry">
+        <div class="product-copy">
+          <div class="product-index">03</div>
+          <h3>The Quiet Notebook</h3>
+          <p class="product-description">An editorial and product environment for questions, reflection, and continuing thought.</p>
+          <p class="product-reference"><strong>The Quiet Room / Quiet Corner</strong> are experiences within The Quiet Notebook environment.</p>
+          <a href="https://thequietnotebook.com" target="_blank" rel="noopener noreferrer">Visit The Quiet Notebook →</a>
+        </div>
+        <div class="product-visual quiet-notebook-visual" aria-label="Reserved media area for future Quiet Notebook and Quiet Room product evidence">
+          <div class="brand-field quiet-brand-field">
+            <span>Editorial environment</span>
+            <strong>The Quiet Notebook</strong>
+            <small>The Quiet Room / Quiet Corner</small>
+          </div>
+          <p>Editorial evidence reserved for the next review.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <h2>Selected Clients</h2>
     <p>
@@ -137,3 +205,252 @@ const description = "Product design, UX/UI, and digital experience design for bu
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .building-section {
+    padding-top: 76px;
+    padding-bottom: 84px;
+  }
+
+  .building-intro {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+    column-gap: 76px;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+
+  .building-intro .eyebrow,
+  .building-intro h2 {
+    grid-column: 1;
+  }
+
+  .building-intro h2 {
+    font-size: clamp(38px, 4.5vw, 58px);
+    max-width: 360px;
+  }
+
+  .building-intro p {
+    grid-column: 2;
+    margin: 0 0 18px;
+  }
+
+  .building-intro .building-lead {
+    grid-row: 1 / span 2;
+    align-self: end;
+    font-size: 22px;
+    line-height: 1.42;
+  }
+
+  .building-intro .building-lead + p {
+    grid-row: 3;
+  }
+
+  .product-portfolio {
+    border-top: 1px solid var(--line);
+  }
+
+  .product-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 68px;
+    align-items: stretch;
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .product-entry-reverse .product-copy {
+    grid-column: 2;
+  }
+
+  .product-entry-reverse .product-visual {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .product-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .product-index {
+    margin-bottom: 26px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .product-copy h3 {
+    margin: 0 0 18px;
+    font-size: clamp(32px, 3.4vw, 46px);
+    line-height: 1.04;
+  }
+
+  .product-copy p {
+    margin: 0 0 18px;
+    font-size: 16px;
+  }
+
+  .product-copy .product-description {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  .product-relationship,
+  .product-reference {
+    color: var(--muted);
+  }
+
+  .product-copy a {
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  .product-visual {
+    min-height: 350px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    background: var(--card);
+  }
+
+  .product-visual::after {
+    content: "";
+    display: block;
+    width: 42%;
+    border-top: 1px solid var(--accent);
+  }
+
+  .product-visual p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .brand-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 390px;
+  }
+
+  .brand-field span {
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .brand-field strong {
+    font-size: clamp(32px, 4vw, 54px);
+    line-height: 1;
+  }
+
+  .brand-field small {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .cognit-studio-visual {
+    background: #fff;
+  }
+
+  .cognit-learning-visual {
+    background: #f1efea;
+  }
+
+  .quiet-notebook-visual {
+    background: var(--text);
+    color: #fff;
+  }
+
+  .quiet-notebook-visual .brand-field span,
+  .quiet-notebook-visual .brand-field small,
+  .quiet-notebook-visual p {
+    color: #c8c8c8;
+  }
+
+  .quiet-notebook-visual::after {
+    border-top-color: #fff;
+  }
+
+  @media (max-width: 820px) {
+    .building-intro {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .building-intro .eyebrow,
+    .building-intro h2,
+    .building-intro p,
+    .building-intro .building-lead,
+    .building-intro .building-lead + p {
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    .building-intro h2 {
+      max-width: none;
+      margin-bottom: 28px;
+    }
+
+    .building-intro .building-lead {
+      align-self: auto;
+    }
+
+    .product-entry {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    .product-entry-reverse .product-copy,
+    .product-entry-reverse .product-visual {
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    .product-entry-reverse .product-copy {
+      grid-row: 1;
+    }
+
+    .product-visual {
+      min-height: 300px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .building-section {
+      padding-top: 58px;
+      padding-bottom: 64px;
+    }
+
+    .building-intro {
+      margin-bottom: 44px;
+    }
+
+    .building-intro .building-lead {
+      font-size: 20px;
+    }
+
+    .product-entry {
+      padding: 44px 0;
+    }
+
+    .product-visual {
+      min-height: 250px;
+      padding: 26px;
+    }
+
+    .brand-field strong {
+      font-size: 34px;
+    }
+  }
+</style>
