@@ -34,7 +34,17 @@ const canonicalUrl = `${canonicalHost}${canonicalPath}`;
           <span>design</span>
         </a>
 
-        <div class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Open navigation"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
           <a href="/">Home</a>
           <a href="/services">Services</a>
           <a href="/what-were-building">Products</a>
@@ -42,9 +52,49 @@ const canonicalUrl = `${canonicalHost}${canonicalPath}`;
           <a href="/work">Work</a>
           <a href="/about">About</a>
           <a href="mailto:connect@o2mdesign.com">Contact</a>
-        </div>
+        </nav>
       </div>
     </header>
+
+    <script is:inline>
+      const navToggle = document.querySelector(".nav-toggle");
+      const primaryNavigation = document.querySelector("#primary-navigation");
+      const mobileNavigation = window.matchMedia("(max-width: 760px)");
+
+      const closeNavigation = ({ returnFocus = false } = {}) => {
+        if (!(navToggle instanceof HTMLButtonElement) || !(primaryNavigation instanceof HTMLElement)) return;
+
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open navigation");
+        primaryNavigation.classList.remove("is-open");
+
+        if (returnFocus) navToggle.focus();
+      };
+
+      if (navToggle instanceof HTMLButtonElement && primaryNavigation instanceof HTMLElement) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+
+          navToggle.setAttribute("aria-expanded", String(!isOpen));
+          navToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+          primaryNavigation.classList.toggle("is-open", !isOpen);
+        });
+
+        primaryNavigation.addEventListener("click", (event) => {
+          if (mobileNavigation.matches && event.target instanceof HTMLAnchorElement) {
+            closeNavigation();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+            closeNavigation({ returnFocus: true });
+          }
+        });
+
+        mobileNavigation.addEventListener("change", () => closeNavigation());
+      }
+    </script>
 
     <slot />
 
