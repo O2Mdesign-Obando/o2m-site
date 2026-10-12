@@ -62,6 +62,66 @@ a:hover {
   opacity: 1;
 }
 
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-toggle-icon {
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-icon::before {
+  top: -7px;
+}
+
+.nav-toggle-icon::after {
+  top: 7px;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon {
+  background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 .hero {
   max-width: 1080px;
   margin: 0 auto;
@@ -144,12 +204,30 @@ footer {
 
 @media (max-width: 760px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .nav-links {
-    flex-wrap: wrap;
+    display: none;
+    flex: 0 0 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 18px;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
   }
 
   .grid {
@@ -250,33 +328,7 @@ footer {
 
 @media (max-width: 760px) {
   .site-header {
-    padding: 28px 20px 22px;
-  }
-
-  .nav {
-    gap: 22px;
-  }
-
-  .brand-logo {
-    gap: 18px;
-  }
-
-  .brand-logo img {
-    width: 88px;
-    height: 88px;
-  }
-
-  .brand-logo span {
-    font-size: 32px;
-  }
-
-  .nav-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    font-size: 18px;
-    padding-top: 8px;
+    padding: 20px;
   }
 
   .hero {
